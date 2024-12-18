@@ -9,22 +9,18 @@ Singular Value Decomposition (SVD) is a powerful mathematical tool used in vario
 #### How it Works:
 1. **Decomposition**: An image is represented as a matrix of pixel values, typically with dimensions \( m \times n \). SVD decomposes this matrix \( A \) into three smaller matrices:
 
-   $$
-   A = U \Sigma V^T
-   $$
+   $$A = U \Sigma V^T$$
 
    where:
-   - \( U \) is an \( m \times m \) orthogonal matrix (containing the left singular vectors),
-   - \( \Sigma \) is an \( m \times n \) diagonal matrix (containing singular values),
-   - \( V^T \) is an \( n \times n \) orthogonal matrix (containing the right singular vectors).
+   - \( U \) is an $\( m \times m \$) orthogonal matrix (containing the left singular vectors),
+   - \($\Sigma \$) is an $\( m \times n \$) diagonal matrix (containing singular values),
+   - $\( V^T \$) is an $\( n \times n \$) orthogonal matrix (containing the right singular vectors).
 
-2. **Compression**: In the context of compression, the idea is to keep only the largest singular values in \( \Sigma \) and corresponding columns in \( U \) and \( V \), as these capture the most significant features of the image. By truncating small singular values, the image can be represented with far fewer components, achieving compression.
+2. **Compression**: In the context of compression, the idea is to keep only the largest singular values in $\( \Sigma \$) and corresponding columns in \( U \) and \( V \), as these capture the most significant features of the image. By truncating small singular values, the image can be represented with far fewer components, achieving compression.
 
 3. **Reconstruction**: The compressed image is obtained by multiplying the truncated matrices:
 
-   $$
-   A' = U_k \Sigma_k V_k^T
-   $$
+   $$A' = U_k \Sigma_k V_k^T$$
 
    where \( k \) is the number of singular values kept. This results in a lower-rank approximation of the original matrix, which is an approximation of the original image.
 
